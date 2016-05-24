@@ -6,10 +6,12 @@ import android.support.annotation.Nullable;
 
 import com.dexafree.materialList.card.event.DismissEvent;
 
+import java.io.Serializable;
+
 /**
  * A basic Card.
  */
-public class Card {
+public class Card implements Serializable{
     @NonNull
     private final CardProvider mProvider;
     @Nullable

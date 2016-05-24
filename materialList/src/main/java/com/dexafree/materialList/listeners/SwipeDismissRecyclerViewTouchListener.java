@@ -41,19 +41,19 @@ import static com.nineoldandroids.view.ViewHelper.setTranslationX;
 import static com.nineoldandroids.view.ViewPropertyAnimator.animate;
 
 /**
- * A {@link View.OnTouchListener} that makes the list items in a {@link ListView} dismissable.
+ * <p>A {@link View.OnTouchListener} that makes the list items in a {@link ListView} dismissable.
  * {@link ListView} is given special treatment because by default it handles touches for its list
  * items... i.e. it's in charge of drawing the pressed state (the list selector), handling list item
  * clicks, etc.
- * <p/>
+ * </p>
  * <p>After creating the listener, the caller should also call {@link
  * ListView#setOnScrollListener(AbsListView.OnScrollListener)}, passing in the scroll listener
  * returned by {@link #makeScrollListener()}. If a scroll listener is already assigned, the caller
  * should still pass scroll changes through to this listener. This will ensure that this {@link
  * SwipeDismissRecyclerViewTouchListener} is paused during list view scrolling.</p>
- * <p/>
+ *
  * <p>Example usage:</p>
- * <p/>
+ *
  * <pre>
  * SwipeDismissRecyclerViewTouchListener touchListener =
  *         new SwipeDismissRecyclerViewTouchListener(
@@ -69,9 +69,9 @@ import static com.nineoldandroids.view.ViewPropertyAnimator.animate;
  * listView.setOnTouchListener(touchListener);
  * listView.setOnScrollListener(touchListener.makeScrollListener());
  * </pre>
- * <p/>
+ *
  * <p>This class Requires API level 12 or later due to use of {@link ViewPropertyAnimator}.</p>
- * <p/>
+ *
  * <p>For a generalized {@link View.OnTouchListener} that makes any view dismissable.</p>
  *
  */
@@ -152,13 +152,14 @@ public class SwipeDismissRecyclerViewTouchListener implements View.OnTouchListen
 	}
 
 	/**
-	 * Returns an {@link AbsListView.OnScrollListener} to be added to the {@link ListView} using
+	 * <p>Returns an {@link AbsListView.OnScrollListener} to be added to the {@link ListView} using
 	 * {@link ListView#setOnScrollListener(AbsListView.OnScrollListener)}. If a scroll listener is
 	 * already assigned, the caller should still pass scroll changes through to this listener. This
 	 * will ensure that this {@link SwipeDismissRecyclerViewTouchListener} is paused during list
 	 * view scrolling.</p>
 	 *
 	 * @see SwipeDismissRecyclerViewTouchListener
+	 * @return
 	 */
 	public RecyclerView.OnScrollListener makeScrollListener() {
 		return new RecyclerView.OnScrollListener() {

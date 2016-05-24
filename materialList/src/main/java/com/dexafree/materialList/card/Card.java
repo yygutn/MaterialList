@@ -107,6 +107,7 @@ public class Card implements Serializable{
          * Set a tag.
          *
          * @param object as tag.
+         * @return this
          */
         @NonNull
         public Builder setTag(@Nullable final Object object) {
@@ -116,6 +117,7 @@ public class Card implements Serializable{
 
         /**
          * Set the card dismissible - it is then removable.
+         * @return this
          */
         @NonNull
         public Builder setDismissible() {

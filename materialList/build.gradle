@@ -28,4 +28,4 @@ dependencies {
 }
 
 // Script to upload plugin to Maven
-apply from: '../maven_push.gradle'
+apply from: '../push.gradle'
